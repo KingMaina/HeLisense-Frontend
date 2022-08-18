@@ -1,0 +1,224 @@
+{
+  "name": "motorbike",
+  "displayModelName": "Motorbike",
+  "sidebarIcon": "ambulance",
+  "allowAdd": true,
+  "allowEdit": true,
+  "allowDelete": true,
+  "allowView": true,
+  "attributes": [
+    {
+      "attrName": "_id",
+      "type": "String"
+    },
+    {
+      "attrName": "vehicleRegistrationNumber",
+      "type": "String",
+      "required": true,
+      "unique": true,
+      "lowercase": false,
+      "trim": false
+    },
+    {
+      "attrName": "status",
+      "type": "Number",
+      "enum": {
+        "ACTIVE": "ACTIVE",
+        "SUSPENDED": "SUSPENDED"
+      }
+    },
+    {
+      "attrName": "vehicleOwner",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "isDeleted",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "isActive",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "createdAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "updatedAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "addedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    },
+    {
+      "attrName": "updatedBy",
+      "type": "ObjectId",
+      "ref": "user"
+    }
+  ],
+  "screenLayout": {
+    "singlePageForm": "doubleLine",
+    "listing": {
+      "name": "Table layout",
+      "description": "Select properties you want to manage for tables on react theme page listing.",
+      "config": {
+        "paginate": true,
+        "limitSetup": 10,
+        "dataCount": true,
+        "search": false,
+        "sorting": false,
+        "optionToEnable": false,
+        "rowSelection": false
+      }
+    },
+    "loader": "lazyLoading"
+  },
+  "actions": [
+    {
+      "category": "addEdit",
+      "attributes": [
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "InputWidget",
+          "type": "String",
+          "required": true,
+          "unique": true,
+          "lowercase": false,
+          "trim": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "status",
+          "label": "Status",
+          "inputType": "SelectWidget",
+          "type": "Number",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "enum": {
+            "ACTIVE": "ACTIVE",
+            "SUSPENDED": "SUSPENDED"
+          }
+        },
+        {
+          "attrName": "vehicleOwner",
+          "label": "Vehicle Owner",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "name",
+          "mergeFields": []
+        }
+      ]
+    },
+    {
+      "category": "listing",
+      "attributes": [
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "InputWidget",
+          "type": "String",
+          "required": true,
+          "unique": true,
+          "lowercase": false,
+          "trim": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "status",
+          "label": "Status",
+          "inputType": "SelectWidget",
+          "type": "Number",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "enum": {
+            "ACTIVE": "ACTIVE",
+            "SUSPENDED": "SUSPENDED"
+          }
+        },
+        {
+          "attrName": "vehicleOwner",
+          "label": "Vehicle Owner",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "name",
+          "mergeFields": []
+        }
+      ]
+    },
+    {
+      "category": "detailView",
+      "attributes": [
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "InputWidget",
+          "type": "String",
+          "required": true,
+          "unique": true,
+          "lowercase": false,
+          "trim": false,
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0
+        },
+        {
+          "attrName": "status",
+          "label": "Status",
+          "inputType": "SelectWidget",
+          "type": "Number",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "enum": {
+            "ACTIVE": "ACTIVE",
+            "SUSPENDED": "SUSPENDED"
+          }
+        },
+        {
+          "attrName": "vehicleOwner",
+          "label": "Vehicle Owner",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "ref": "user",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2,
+          "valueAttribute": "_id",
+          "displayAttribute": "name",
+          "mergeFields": []
+        }
+      ]
+    }
+  ],
+  "allowSoftDelete": true,
+  "allowHardDelete": true
+}

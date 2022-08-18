@@ -1,0 +1,191 @@
+{
+  "name": "detection",
+  "displayModelName": "Detection",
+  "sidebarIcon": "address-card",
+  "allowAdd": true,
+  "allowEdit": true,
+  "allowDelete": true,
+  "allowView": true,
+  "attributes": [
+    {
+      "attrName": "_id",
+      "type": "String"
+    },
+    {
+      "attrName": "imageUrl",
+      "type": "URL",
+      "required": false
+    },
+    {
+      "attrName": "vehicleRegistrationNumber",
+      "type": "ObjectId",
+      "ref": "motorbike"
+    },
+    {
+      "attrName": "location",
+      "type": "String"
+    },
+    {
+      "attrName": "isDeleted",
+      "type": "Boolean"
+    },
+    {
+      "attrName": "createdAt",
+      "type": "Date"
+    },
+    {
+      "attrName": "updatedAt",
+      "type": "Date"
+    }
+  ],
+  "screenLayout": {
+    "singlePageForm": "doubleLine",
+    "listing": {
+      "name": "Table layout",
+      "description": "Select properties you want to manage for tables on react theme page listing.",
+      "config": {
+        "paginate": true,
+        "limitSetup": 10,
+        "dataCount": true,
+        "search": false,
+        "sorting": false,
+        "optionToEnable": false,
+        "rowSelection": false
+      }
+    },
+    "loader": "lazyLoading"
+  },
+  "actions": [
+    {
+      "category": "addEdit",
+      "attributes": [
+        {
+          "attrName": "imageUrl",
+          "label": "Image",
+          "inputType": "UrlInput",
+          "type": "URL",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0,
+          "required": false
+        },
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "ref": "motorbike",
+          "valueAttribute": "_id",
+          "displayAttribute": "vehicleRegistrationNumber",
+          "mergeFields": [
+            "status",
+            "_id"
+          ]
+        },
+        {
+          "attrName": "location",
+          "label": "Location",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2
+        }
+      ]
+    },
+    {
+      "category": "listing",
+      "attributes": [
+        {
+          "attrName": "imageUrl",
+          "label": "Image",
+          "inputType": "UrlInput",
+          "type": "URL",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0,
+          "required": false
+        },
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "ref": "motorbike",
+          "valueAttribute": "_id",
+          "displayAttribute": "vehicleRegistrationNumber",
+          "mergeFields": [
+            "status",
+            "_id"
+          ]
+        },
+        {
+          "attrName": "location",
+          "label": "Location",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2
+        }
+      ]
+    },
+    {
+      "category": "detailView",
+      "attributes": [
+        {
+          "attrName": "imageUrl",
+          "label": "Image",
+          "inputType": "UrlInput",
+          "type": "URL",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 0,
+          "required": false
+        },
+        {
+          "attrName": "vehicleRegistrationNumber",
+          "label": "Vehicle Registration Number",
+          "inputType": "RefWidget",
+          "type": "ObjectId",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 1,
+          "ref": "motorbike",
+          "valueAttribute": "_id",
+          "displayAttribute": "vehicleRegistrationNumber",
+          "mergeFields": [
+            "status",
+            "_id"
+          ]
+        },
+        {
+          "attrName": "location",
+          "label": "Location",
+          "inputType": "InputWidget",
+          "type": "String",
+          "noEdit": false,
+          "search": true,
+          "sorting": true,
+          "sequence": 2
+        }
+      ]
+    }
+  ],
+  "allowSoftDelete": true,
+  "allowHardDelete": true
+}

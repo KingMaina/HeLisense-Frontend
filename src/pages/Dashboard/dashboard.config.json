@@ -1,0 +1,77 @@
+{
+  "dashboard": {
+    "1": [
+      
+      {
+        "id": "5f59639d-89d5-455e-a661-75317904e88d",
+        "name": "Count",
+        "width": 3,
+        "model": "detection",
+        "limit": 10,
+        "filter":{}
+        ,
+        "formatedModelName": "Detection"
+      },
+      {
+        "id": "225cfecc-72d3-40b8-9f95-ad84185de252",
+        "name": "Count",
+        "width": 3,
+        "model": "motorbike",
+        "limit": 10,
+        "filter": {
+        },
+        "formatedModelName": "Motorbike"
+      }
+    ],
+    "3": [
+      {
+        "id": "38d1c5b2-33ea-4e0b-b683-582d0fb5b03b",
+        "name": "Table",
+        "width": 6,
+        "model": "motorbike",
+        "redirectedModel": "user",
+        "attributes": [
+          {
+            "uid": "6617a34f-3ac8-4d42-aaf0-6c6da1db66a5",
+            "attrName": "imageUrl",
+            "type": "String",
+            "label": "imageUrl",
+            "sequence": 0
+          },
+          {
+            "uid": "fd14ddb2-c591-4b8d-b791-bd228d3631b8",
+            "attrName": "vehicleRegistrationNumber",
+            "type": "String",
+            "label": "vehicleRegistrationNumber",
+            "sequence": 1
+          },
+          {
+            "uid": "b6b01ac5-03b0-43c7-a237-ab93b0c921e8",
+            "attrName": "vehicleOwner",
+            "ref": "user",
+            "type": "ObjectId",
+            "displayAttribute": "name",
+            "valueAttribute": "_id",
+            "label": "vehicleOwner",
+            "sequence": 2
+          },
+          {
+            "uid": "ee371391-864a-4f2f-bcd2-c08db4739e46",
+            "attrName": "status",
+            "type": "Number",
+            "label": "status",
+            "sequence": 3
+          }
+        ],
+        "options": {
+          "sort": {
+            "createdAt": -1
+          }
+        },
+        "limit": 10,
+        "formatedModelName": "Motorbike"
+      }
+    ],
+    "4": []
+  }
+}
